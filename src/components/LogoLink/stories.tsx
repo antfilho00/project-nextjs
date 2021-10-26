@@ -1,23 +1,24 @@
-import { LogoLink } from '.';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { LogoLink, LogoLinkProps } from '.';
 
 export default {
   title: 'LogoLink',
   component: LogoLink,
   args: {
     text: 'LogoLink',
-    srcImage: 'assets/images/logo.svg',
+    srcImg: 'assets/images/logo.svg',
     link: 'https://www.google.com.br',
   },
-};
+} as Meta;
 
-export const ImageOnly = (args) => {
+export const ImageOnly: Story<LogoLinkProps> = (args) => {
   return (
     <div>
       <LogoLink {...args} />
     </div>
   );
 };
-export const TextOnly = (args) => {
+export const TextOnly: Story<LogoLinkProps> = (args) => {
   return (
     <div>
       <LogoLink {...args} />
@@ -26,5 +27,5 @@ export const TextOnly = (args) => {
 };
 
 TextOnly.args = {
-  srcImage: '',
+  srcImg: '',
 };

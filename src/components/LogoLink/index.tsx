@@ -1,8 +1,13 @@
-import P from 'prop-types';
 import * as Styled from './styles';
 import { Heading } from '../Heading';
 
-export const LogoLink = ({ text, srcImg = '', link }) => {
+export type LogoLinkProps = {
+  text: string;
+  srcImg?: string;
+  link: string;
+};
+
+export const LogoLink = ({ text, srcImg = '', link }: LogoLinkProps) => {
   return (
     <Heading size="small" uppercase={true}>
       <Styled.LogoLink href={link}>
@@ -10,10 +15,4 @@ export const LogoLink = ({ text, srcImg = '', link }) => {
       </Styled.LogoLink>
     </Heading>
   );
-};
-
-LogoLink.propTypes = {
-  text: P.string.isRequired,
-  srcImg: P.string,
-  link: P.string.isRequired,
 };
