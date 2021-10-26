@@ -1,3 +1,5 @@
+import { GridContentProps } from '.';
+
 export default {
   title: 'O titulo que eu quero',
   html: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Certe, nisi voluptatem tanti aestimaretis. Restatis igitur vos; </p>
@@ -27,4 +29,4 @@ export default {
   </ul>
   `,
   background: false,
-};
+} as GridContentProps;

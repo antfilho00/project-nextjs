@@ -1,7 +1,11 @@
-import P from 'prop-types';
-
 import * as Styled from './styles';
 import { SectionContainer } from '../SectionContainer';
+
+export type SectionBackgroundProps = {
+  children: React.ReactNode;
+  background?: boolean;
+  sectionId?: string;
+};
 
 const random = () =>
   `id-${Math.random() * 10000}`.replace(/[^a-z0-9-_]/gi, '-');
@@ -10,7 +14,7 @@ export const SectionBackground = ({
   children,
   background = false,
   sectionId = '',
-}) => {
+}: SectionBackgroundProps) => {
   const id = sectionId ? sectionId : random();
 
   return (
@@ -18,10 +22,4 @@ export const SectionBackground = ({
       <SectionContainer>{children}</SectionContainer>
     </Styled.Container>
   );
-};
-
-SectionBackground.propTypes = {
-  children: P.node.isRequired,
-  background: P.bool,
-  sectionId: P.string,
 };
