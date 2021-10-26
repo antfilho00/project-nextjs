@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ul, ol {
-    margin: ${({ theme }) => theme.spacings.medium} 0
+    margin: ${({ theme }) => theme.spacings.medium} 0;
     padding: ${({ theme }) => theme.spacings.medium} 0
   }
 

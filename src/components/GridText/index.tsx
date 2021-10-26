@@ -9,10 +9,10 @@ export type GridTextElementProps = {
 };
 
 export type GridTextProps = {
+  background?: boolean;
   title: string;
   description: string;
   grid: GridTextElementProps[];
-  background?: boolean;
   sectionId?: string;
 };
 
