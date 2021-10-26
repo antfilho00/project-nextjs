@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { PageDataProps } from '../templates/Home';
 import { mapMenu } from './map-menu';
 import { mapSections } from './map-sections';
 
-export const mapData = (pagesData = [{}]) => {
-  return pagesData.map((data) => {
+export const mapData = (pagesData = [{}] as any): PageDataProps[] => {
+  return pagesData.map((data: any): PageDataProps => {
     const {
       footer_text: footerHtml = '',
       slug = '',
